@@ -147,18 +147,25 @@ body {
 .value-item {
     padding: 30px;
     border-radius: 12px;
-    background: #f8f9fa;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .value-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
-.value-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+.value-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.2s ease;
+}
+
+.value-link:hover {
+    transform: translateX(5px);
 }
 
 .value-item h3 {
