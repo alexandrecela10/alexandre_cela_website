@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
         '.value-section',
         '.side-section',
         '.case-studies-section',
+        '.testimonials-section',
         '.cta-section',
         '.thank-you-section'
     ];
