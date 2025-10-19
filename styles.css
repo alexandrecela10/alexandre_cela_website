@@ -180,6 +180,27 @@ body {
     line-height: 1.6;
 }
 
+.value-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+/* Summary Section */
+.summary-section {
+    background: #f8f9fa;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.summary-text {
+    font-size: 0.95rem;
+    color: #666;
+    font-style: italic;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
 /* Side Value Propositions Section */
 .side-section {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -234,20 +255,11 @@ body {
 
 .side-number {
     font-size: 3rem;
-    font-weight: 700;
     color: rgba(255, 255, 255, 0.3);
     margin-bottom: 1rem;
 }
 
-.side-card h3 {
-    font-size: 1.6rem;
-    margin-bottom: 1rem;
-    color: #fff;
-}
-
-.side-card p {
-    font-size: 1rem;
-    line-height: 1.6;
+.side-value-icon {
     color: rgba(255, 255, 255, 0.85);
     margin-bottom: 1.5rem;
 }
