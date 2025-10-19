@@ -138,8 +138,159 @@ setTimeout(() => {
 
 ---
 
+---
+
+## Session 2: Main Value Proposition Section
+**Date:** 2025-10-19
+
+### CSS Grid Layout
+
+**What is CSS Grid?**
+A powerful 2D layout system for creating rows and columns. Different from Flexbox (which is 1D).
+
+```css
+display: grid;
+grid-template-columns: repeat(3, 1fr);  /* 3 equal columns */
+gap: 40px;                               /* Space between grid items */
+```
+
+**Key Concepts:**
+- `1fr` = "1 fraction" of available space
+- `repeat(3, 1fr)` = shorthand for "1fr 1fr 1fr"
+- Grid automatically wraps items into rows
+
+**When to use Grid vs Flexbox?**
+- **Grid:** When you need both rows AND columns (like a card layout)
+- **Flexbox:** When you need items in a single row OR column
+
+**Principle:** Grid is perfect for card layouts, galleries, and structured content.
+
+---
+
+### CSS Transform Property
+
+**What is Transform?**
+Changes an element's position, size, or rotation without affecting document flow.
+
+```css
+transform: translateY(-5px);  /* Moves element up 5 pixels */
+transform: scale(1.05);       /* Makes element 5% bigger */
+```
+
+**Why use Transform instead of changing position?**
+- Smoother animations (uses GPU)
+- Doesn't trigger layout recalculations
+- Better performance
+
+**Common transforms:**
+- `translateX()` / `translateY()` - Move horizontally/vertically
+- `scale()` - Resize
+- `rotate()` - Spin element
+
+---
+
+### Intersection Observer API
+
+**What is it?**
+JavaScript API that detects when an element enters or leaves the viewport (visible screen area).
+
+```javascript
+const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // Element is visible!
+            entry.target.classList.add('visible');
+        }
+    });
+}, options);
+
+observer.observe(element);  // Start watching this element
+```
+
+**Key Options:**
+- `threshold: 0.2` - Trigger when 20% of element is visible
+- `rootMargin: '0px 0px -100px 0px'` - Adjust trigger zone
+
+**Why use it?**
+- Animate elements as user scrolls
+- Lazy load images
+- Track user engagement
+- Better than scroll event listeners (more performant)
+
+**Principle:** Scroll animations make the site feel dynamic and engaging.
+
+---
+
+### CSS Classes for State Management
+
+**Pattern: Using classes to trigger animations**
+
+```css
+.value-section {
+    opacity: 0;                    /* Hidden by default */
+    transform: translateY(30px);   /* Positioned below */
+}
+
+.value-section.visible {
+    opacity: 1;                    /* Fade in */
+    transform: translateY(0);      /* Move to normal position */
+}
+```
+
+**How it works:**
+1. Element starts hidden and moved down
+2. JavaScript adds `.visible` class when scrolled into view
+3. CSS transition smoothly animates the change
+
+**Principle:** Separate structure (HTML), appearance (CSS), and behavior (JavaScript). JavaScript only adds/removes classes; CSS handles the visual changes.
+
+---
+
+### Responsive Grid
+
+**Making grids work on mobile:**
+
+```css
+.value-details {
+    grid-template-columns: repeat(3, 1fr);  /* Desktop: 3 columns */
+}
+
+@media (max-width: 768px) {
+    .value-details {
+        grid-template-columns: 1fr;  /* Mobile: 1 column (stacked) */
+    }
+}
+```
+
+**Principle:** Always design for mobile. Test how your layout collapses on smaller screens.
+
+---
+
+### Design Pattern: Card Hover Effects
+
+**Creating interactive cards:**
+
+```css
+.value-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-item:hover {
+    transform: translateY(-5px);              /* Lift up */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Add shadow */
+}
+```
+
+**Why this works:**
+- Provides visual feedback
+- Makes interface feel responsive
+- Subtle enough not to distract
+
+**Principle:** Hover effects should enhance, not distract. Keep them subtle and smooth.
+
+---
+
 ## Next Steps
-- Main Value Proposition section
-- Side Value Propositions
+- Side Value Propositions section
 - Call to Action
-- Supporting content sections
+- Supporting content sections (Case Studies, Testimonials, Articles)
