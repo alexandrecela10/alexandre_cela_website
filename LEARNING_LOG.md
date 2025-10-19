@@ -449,7 +449,201 @@ observer.observe(sideSection);
 
 ---
 
+---
+
+## Session 4: Call to Action Section
+**Date:** 2025-10-19
+
+### Button Styling and States
+
+**Creating clickable buttons with links:**
+
+```css
+.cta-button {
+    display: inline-block;      /* Makes link behave like button */
+    padding: 16px 32px;         /* Internal spacing */
+    border-radius: 8px;         /* Rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+```
+
+**Why `display: inline-block`?**
+- Links (`<a>`) are inline by default (can't have padding/width)
+- `inline-block` lets you add padding and dimensions
+- Still flows with text unlike `block`
+
+**Principle:** Links can be styled as buttons. Use semantic HTML (`<a>`) for navigation, style it to look like a button.
+
+---
+
+### Multiple Button Variants
+
+**Primary vs Secondary buttons:**
+
+```css
+.cta-button.primary {
+    background: #3498db;        /* Blue - main action */
+}
+
+.cta-button.secondary {
+    background: #2c3e50;        /* Dark gray - alternative */
+}
+```
+
+**Visual hierarchy with buttons:**
+- **Primary:** Most important action (email)
+- **Secondary:** Alternative action (LinkedIn)
+- Use color to guide user attention
+
+**Principle:** One primary action per section. Secondary actions should be visually subordinate.
+
+---
+
+### Box Shadow for Depth
+
+**Creating elevation with shadows:**
+
+```css
+box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+```
+
+**Breaking it down:**
+- `0` - Horizontal offset (centered)
+- `4px` - Vertical offset (shadow below)
+- `15px` - Blur radius (soft edges)
+- `rgba(52, 152, 219, 0.3)` - Color matching button at 30% opacity
+
+**Hover state:**
+```css
+.cta-button:hover {
+    transform: translateY(-3px);                    /* Lift up */
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4); /* Bigger shadow */
+}
+```
+
+**Principle:** Shadow size should match elevation. Higher = bigger shadow.
+
+---
+
+### Flexbox with flex-wrap
+
+**Responsive button layout:**
+
+```css
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;           /* Wraps to new line if needed */
+}
+```
+
+**What is flex-wrap?**
+- `nowrap` (default) - Items stay in one line, may overflow
+- `wrap` - Items wrap to next line if container too small
+
+**When to use wrap:**
+- Buttons that should stay side-by-side on desktop
+- But stack on mobile for better touch targets
+
+**Principle:** `flex-wrap` makes layouts naturally responsive without media queries.
+
+---
+
+### Border Styling
+
+**Subtle dividers:**
+
+```css
+.cta-social {
+    border-top: 1px solid #e0e0e0;  /* Light gray line */
+    padding-top: 2rem;
+}
+```
+
+**Why borders work:**
+- Separate content sections visually
+- More subtle than background color changes
+- Light gray (#e0e0e0) doesn't overpower
+
+**Principle:** Use borders to create visual separation without adding heavy design elements.
+
+---
+
+### Link States and Accessibility
+
+**Styling different link states:**
+
+```css
+.social-link {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.social-link:hover {
+    color: #2980b9;              /* Darker on hover */
+    text-decoration: underline;   /* Shows it's clickable */
+}
+```
+
+**Why underline on hover?**
+- Visual feedback that element is interactive
+- Accessibility - helps users with motor difficulties
+- Convention - users expect links to underline
+
+**Principle:** Always provide hover states. Users need feedback that elements are interactive.
+
+---
+
+### mailto: and target="_blank"
+
+**HTML link attributes:**
+
+```html
+<a href="mailto:your.email@example.com">Email</a>
+<a href="https://linkedin.com" target="_blank">LinkedIn</a>
+```
+
+**What they do:**
+- `mailto:` - Opens user's email client
+- `target="_blank"` - Opens link in new tab
+
+**When to use target="_blank":**
+- External links (social media, other websites)
+- Don't use for internal navigation
+- Keeps your site open while user explores
+
+**Principle:** External links should open in new tabs. Internal links should not.
+
+---
+
+### Responsive Button Sizing
+
+**Mobile-friendly buttons:**
+
+```css
+@media (max-width: 768px) {
+    .cta-buttons {
+        flex-direction: column;  /* Stack vertically */
+    }
+    
+    .cta-button {
+        width: 100%;             /* Full width */
+        max-width: 300px;        /* But not too wide */
+    }
+}
+```
+
+**Why max-width?**
+- Full-width buttons are easier to tap on mobile
+- But shouldn't stretch too wide on tablets
+- 300px is comfortable button width
+
+**Principle:** Mobile buttons should be easy to tap. Minimum 44x44px touch target.
+
+---
+
 ## Next Steps
-- Call to Action section
-- Thank You message
+- Thank You message section
 - Supporting content sections (Case Studies, Testimonials, Articles)
