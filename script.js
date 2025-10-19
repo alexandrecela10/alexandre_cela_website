@@ -27,21 +27,19 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
     
     // Observe sections for scroll animations
-    const valueSection = document.querySelector('.value-section');
-    const sideSection = document.querySelector('.side-section');
-    const ctaSection = document.querySelector('.cta-section');
+    const sections = [
+        '.value-section',
+        '.side-section',
+        '.cta-section',
+        '.thank-you-section'
+    ];
     
-    if (valueSection) {
-        observer.observe(valueSection);
-    }
-    
-    if (sideSection) {
-        observer.observe(sideSection);
-    }
-    
-    if (ctaSection) {
-        observer.observe(ctaSection);
-    }
+    sections.forEach(selector => {
+        const section = document.querySelector(selector);
+        if (section) {
+            observer.observe(section);
+        }
+    });
     
     // Add smooth scrolling for future navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
