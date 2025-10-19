@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Observe sections for scroll animations
     const valueSection = document.querySelector('.value-section');
     const sideSection = document.querySelector('.side-section');
+    const ctaSection = document.querySelector('.cta-section');
     
     if (valueSection) {
         observer.observe(valueSection);
@@ -36,6 +37,10 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (sideSection) {
         observer.observe(sideSection);
+    }
+    
+    if (ctaSection) {
+        observer.observe(ctaSection);
     }
     
     // Add smooth scrolling for future navigation links
