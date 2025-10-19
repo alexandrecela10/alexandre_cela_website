@@ -4,6 +4,14 @@
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Website loaded successfully!');
     
+    // Fade in animation for intro section
+    const introSection = document.querySelector('.intro-section');
+    if (introSection) {
+        setTimeout(() => {
+            introSection.style.opacity = '1';
+        }, 100);
+    }
+    
     // Add smooth scrolling for future navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
