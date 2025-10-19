@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const sections = [
         '.value-section',
         '.side-section',
+        '.case-studies-section',
         '.cta-section',
         '.thank-you-section'
     ];
