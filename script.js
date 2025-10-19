@@ -26,10 +26,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
     
-    // Observe value section
+    // Observe sections for scroll animations
     const valueSection = document.querySelector('.value-section');
+    const sideSection = document.querySelector('.side-section');
+    
     if (valueSection) {
         observer.observe(valueSection);
+    }
+    
+    if (sideSection) {
+        observer.observe(sideSection);
     }
     
     // Add smooth scrolling for future navigation links

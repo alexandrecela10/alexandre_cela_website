@@ -166,6 +166,91 @@ body {
     line-height: 1.6;
 }
 
+/* Side Value Propositions Section */
+.side-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.side-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.side-content {
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.side-section .section-title {
+    color: #fff;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 3rem;
+}
+
+.side-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 2rem;
+}
+
+.side-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    padding: 40px;
+    text-align: left;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.side-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.side-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.3);
+    margin-bottom: 1rem;
+}
+
+.side-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.side-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 1.5rem;
+}
+
+.side-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    transition: transform 0.2s ease;
+}
+
+.side-link:hover {
+    transform: translateX(5px);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .intro-content {
@@ -200,6 +285,11 @@ body {
     }
     
     .value-details {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .side-grid {
         grid-template-columns: 1fr;
         gap: 20px;
     }
