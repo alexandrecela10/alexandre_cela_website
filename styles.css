@@ -290,7 +290,7 @@ section {
 .result-number {
     font-size: 56px;
     font-weight: 800;
-    color: var(--success-color);
+    color: var(--primary-color);
     margin-bottom: 12px;
 }
 
