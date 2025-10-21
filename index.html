@@ -8,6 +8,19 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="nav-brand">Alexandre<span class="brand-accent">.io</span></div>
+            <div class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#offers" class="nav-link">Offer</a>
+                <a href="#results" class="nav-link">Impact</a>
+                <a href="#contact" class="btn btn-nav-cta">Get Clarity</a>
+            </div>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
@@ -106,7 +119,7 @@
     </section>
 
     <!-- Results Section -->
-    <section class="results-section">
+    <section id="results" class="results-section">
         <div class="container">
             <h2 class="section-title">Some tangible results highlights</h2>
             <p class="section-subtitle">From data to action: measurable outcomes</p>
@@ -223,6 +236,40 @@
         </div>
     </section>
 
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">What Clients and Teammates Say</h2>
+            <p class="section-subtitle">Don't just take my word for it. Here is the direct impact of my work.</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The clarity they brought to our core product data was immediate. They truly are the 'go-to person' when you have a mountain of messy sources and need production-ready models fast."</p>
+                    <div class="testimonial-author">
+                        <span class="author-name">VP of Product</span>
+                        <span class="author-company">Tech Startup</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Not only did they automate our crucial forecasting pipeline, but the documentation and teamwork were exceptional. A true synergy builder who elevates everyone around them."</p>
+                    <div class="testimonial-author">
+                        <span class="author-name">Senior Data Scientist</span>
+                        <span class="author-company">FinTech</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Alexandre transformed our scattered data sources into actionable insights that directly drove business decisions. The ROI was measurable within weeks."</p>
+                    <div class="testimonial-author">
+                        <span class="author-name">Head of Analytics</span>
+                        <span class="author-company">E-commerce</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Trusted By Section -->
     <section class="trusted-section">
         <div class="container">
@@ -261,15 +308,30 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-section">
+    <section id="contact" class="cta-section">
         <div class="container">
             <div class="cta-content">
-                <h2>Ready to Transform Your Data?</h2>
-                <p>Let's turn your data challenges into competitive advantages</p>
-                <div class="cta-buttons">
-                    <a href="mailto:your.email@example.com" class="btn btn-primary">Get In Touch</a>
-                    <a href="#" class="btn btn-secondary" download>Download Resume</a>
-                </div>
+                <h2>Ready to Solve Your Toughest Data Challenges?</h2>
+                <p>I'm currently taking on select projects that promise high business impact. Let's discuss your needs.</p>
+                
+                <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <input type="hidden" name="_to" value="alex@belvederedatasolutions.com">
+                    <input type="hidden" name="_subject" value="New inquiry from website">
+                    
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Work Email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea name="message" rows="5" placeholder="Tell me about your data challenge and goals" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-form-submit">Send Project Inquiry</button>
+                </form>
             </div>
         </div>
     </section>
