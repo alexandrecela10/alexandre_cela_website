@@ -107,13 +107,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-brand {
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: 600;
     color: var(--text-primary);
-}
-
-.brand-accent {
-    color: var(--accent-green);
 }
 
 .nav-links {
@@ -134,14 +130,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-nav-cta {
-    background: var(--accent-green);
-    color: var(--bg-dark);
+    background: var(--primary-color);
+    color: white;
     padding: 10px 24px;
     font-size: 14px;
 }
 
 .btn-nav-cta:hover {
-    background: #16a34a;
+    background: var(--primary-dark);
     transform: none;
 }
 
@@ -616,8 +612,8 @@ section {
 
 .btn-form-submit {
     width: 100%;
-    background: var(--accent-green);
-    color: var(--bg-dark);
+    background: var(--primary-color);
+    color: white;
     padding: 16px;
     font-size: 16px;
     font-weight: 600;
@@ -628,7 +624,7 @@ section {
 }
 
 .btn-form-submit:hover {
-    background: #16a34a;
+    background: var(--primary-dark);
     transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
 }
