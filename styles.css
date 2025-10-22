@@ -107,9 +107,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-brand {
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 32px;
+    font-weight: 500;
     color: var(--text-primary);
+    font-family: 'Dancing Script', cursive;
+    letter-spacing: 0.5px;
 }
 
 .nav-links {
