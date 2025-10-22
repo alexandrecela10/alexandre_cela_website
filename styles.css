@@ -461,38 +461,63 @@ section {
 }
 
 .trusted-section {
-    background: var(--bg-light);
-    padding: 60px 0;
+    background: var(--bg-dark);
+    padding: 80px 0;
+    overflow: hidden;
+}
+
+.container-full {
+    width: 100%;
 }
 
 .trusted-title {
     text-align: center;
-    font-size: 16px;
+    font-size: 14px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 3px;
     color: var(--text-light);
-    margin-bottom: 32px;
+    margin-bottom: 60px;
+    font-weight: 600;
 }
 
-.trusted-logos {
+.trusted-slider {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.trusted-track {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 48px;
-    flex-wrap: wrap;
+    gap: 80px;
+    animation: slide 30s linear infinite;
+    width: fit-content;
+}
+
+.trusted-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 .trusted-logo {
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 36px;
+    font-weight: 700;
     color: var(--text-secondary);
-    opacity: 0.7;
+    white-space: nowrap;
     transition: var(--transition);
+    flex-shrink: 0;
 }
 
 .trusted-logo:hover {
-    opacity: 1;
-    color: var(--text-primary);
+    color: var(--primary-color);
+    transform: scale(1.1);
 }
 
 .about-section {
