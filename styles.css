@@ -107,11 +107,30 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-brand {
-    font-size: 32px;
-    font-weight: 500;
-    color: var(--text-primary);
-    font-family: 'Dancing Script', cursive;
-    letter-spacing: 0.5px;
+    font-size: 24px;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--text-primary) 0%, var(--primary-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.5px;
+    position: relative;
+    transition: var(--transition);
+}
+
+.nav-brand::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.nav-brand:hover::after {
+    width: 100%;
 }
 
 .nav-links {
