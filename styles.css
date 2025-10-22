@@ -488,9 +488,10 @@ section {
 
 .trusted-track {
     display: flex;
-    gap: 80px;
-    animation: slide 30s linear infinite;
+    gap: 120px;
+    animation: slide 40s linear infinite;
     width: fit-content;
+    padding-left: 100%;
 }
 
 .trusted-track:hover {
