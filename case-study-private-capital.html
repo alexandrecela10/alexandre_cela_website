@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Case Study: From Unexplored Data to £2M+ Private Capital BI Product - Alexandre Cela">
+    <title>Private Capital BI Product Case Study | Alexandre Cela</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .case-study-hero {
+            background: var(--bg-dark);
+            padding: 120px 0 60px;
+        }
+        
+        .case-study-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+        
+        .case-study-content h1 {
+            font-size: 48px;
+            margin-bottom: 24px;
+            color: var(--text-primary);
+        }
+        
+        .case-study-content h2 {
+            font-size: 32px;
+            margin-top: 48px;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+        
+        .case-study-content h3 {
+            font-size: 24px;
+            margin-top: 32px;
+            margin-bottom: 16px;
+            color: var(--primary-color);
+        }
+        
+        .case-study-content p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+        
+        .case-study-content strong {
+            color: var(--text-primary);
+        }
+        
+        .highlight-box {
+            background: var(--bg-card);
+            border-left: 4px solid var(--primary-color);
+            padding: 24px;
+            margin: 32px 0;
+            border-radius: 8px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            margin: 40px 0;
+        }
+        
+        .stat-card {
+            background: var(--bg-card);
+            padding: 24px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 40px;
+            transition: var(--transition);
+        }
+        
+        .back-link:hover {
+            gap: 12px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-brand">Alexandre Cela</a>
+            <div class="nav-links">
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#offers" class="nav-link">Offer</a>
+                <a href="index.html#results" class="nav-link">Impact</a>
+                <a href="index.html#contact" class="btn btn-nav-cta">Get Clarity</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Case Study Hero -->
+    <section class="case-study-hero">
+        <div class="container">
+            <div class="case-study-content">
+                <a href="index.html#case-studies" class="back-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                    Back to Case Studies
+                </a>
+                
+                <h1>From Unexplored Data to a £2M+ Private Capital BI Product</h1>
+                <p style="font-size: 20px; color: var(--text-primary); margin-bottom: 40px;">
+                    <strong>The Goal:</strong> To elevate the company's offering from basic data provision to a high-value, sticky BI data product, dramatically boosting client retention and Lifetime Value (LTV).
+                </p>
+
+                <h2>1. The Challenge (The "Before")</h2>
+                <p>The company already provides useful datasets to private capital players, but how do we get clients to perform more of their workflow within our application? The natural upgrade is an insights layer.</p>
+                
+                <p>I knew there were valuable, hidden datapoints—specifically asset-level operating metrics and granular deal valuation metrics—buried deep within the database of a recently acquired entity.</p>
+                
+                <p><strong>But where exactly is the data? Does it even exist? Can it be trusted?</strong></p>
+                
+                <p>The main challenge was the complete lack of infrastructure and documentation. The acquired entity had no data engineers and zero guidance. This meant my colleague and I had to personally do all the work to validate the source data, establish trust, and prove feasibility, all while building a completely new product.</p>
+
+                <div class="highlight-box">
+                    <h3 style="margin-top: 0;">Key Challenges</h3>
+                    <p><strong>Business Pain:</strong> Client LTV and retention were stagnant, limiting growth. Clients only consumed data, performing analysis elsewhere.</p>
+                    <p><strong>Technical Obstacle:</strong> Data existence, reliability, and source system obscurity. No documentation, no dedicated DE team, and a highly complex legacy SQL Server database.</p>
+                    <p style="margin-bottom: 0;"><strong>Key Metric:</strong> Time-to-Market for a minimum viable product. The aggressive target was 2 months to deliver a revenue-generating prototype.</p>
+                </div>
+
+                <h2>2. The Solution (The "How")</h2>
+                <p>The idea came down to <strong>'Transaction Intelligence,'</strong> a Private Capital Benchmarks BI Data Product. To make this work, I handled solely the data pipeline development (SQL Server → Python → Snowflake) and the UI prototyping.</p>
+                
+                <p style="font-size: 20px; color: var(--primary-color); font-weight: 600;">How do we deliver in 2 months a product that feels like it was developed for many months by an entire product team?</p>
+
+                <h3>The Pipeline</h3>
+                <p>I built a robust and trustworthy ETL data pipeline in record time. I had to deploy systems and frameworks, safely leveraging AI to assist with boilerplate and code quality, ensuring the pipeline was resilient and error-free.</p>
+
+                <h3>The Visualization</h3>
+                <p>I taught myself everything about Power BI to develop a prototype BI application that does not look like it came from PBi. This involved many intensive design and user workflow iterations with the Managing Director and prospective clients to ensure the final prototype instantly communicated value.</p>
+
+                <div class="highlight-box">
+                    <p style="margin-bottom: 0; font-size: 18px;"><strong>🔑 Key Takeaway:</strong> The entire end-to-end data and visualization layer was designed, engineered, and executed by a small team, with the core pipeline falling solely on my shoulders, to meet an impossible deadline.</p>
+                </div>
+
+                <h2>3. The Impact (The "After")</h2>
+                <p>The prototype proved successful enough to warrant immediate native development, demonstrating critical product-market fit and generating immediate revenue.</p>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">£2M+</div>
+                        <div class="stat-label">New revenue in 6 months (including renewals/upsells)</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">30</div>
+                        <div class="stat-label">New businesses signed in first month</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">50%</div>
+                        <div class="stat-label">MoM usage retention (proving workflow value)</div>
+                    </div>
+                </div>
+
+                <p>Notable clients included <strong>Goldman Sachs</strong> and <strong>Apollo Capital</strong>.</p>
+
+                <p>The success of the prototype led to the native version development, where I had a critical impact on the backend calculation logic to guarantee the accuracy of all displayed data. That native deployment proved even more successful, thanks to the great collaboration and synergies I fostered with backend/front-end engineers, designers, and product managers.</p>
+
+                <h2>Next Steps: Maximizing the Lemon</h2>
+                <p><strong>Where do we go from here?</strong></p>
+                
+                <p>The focus shifts from building to maximizing LTV. I now:</p>
+                <ul style="color: var(--text-secondary); line-height: 1.8;">
+                    <li>Further analyse usage of the product to maximize usage retention and client life time value through insights development.</li>
+                    <li>Build processes for leveraging this tool for main package renewal or upsell.</li>
+                    <li>Improve leads-to-sales conversion, leveraging any data points that can be useful to draw recommendations on how to do so. I'm squeezing the lemon as much as possible.</li>
+                </ul>
+
+                <div style="margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--border-color); text-align: center;">
+                    <a href="index.html#contact" class="btn btn-primary">Let's Discuss Your Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Alexandre Cela. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
