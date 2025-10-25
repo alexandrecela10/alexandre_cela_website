@@ -30,7 +30,7 @@
                     <a href="index.html#case-studies">← Back to Case Studies</a>
                 </div>
                 
-                <h1>20% Activation Lift Through Smart User Onboarding</h1>
+                <h1>20% New Users Activation Lift With New Users Onboarding Survey</h1>
                 <p style="font-size: 20px; color: var(--text-primary); margin-bottom: 40px;">
                     <strong>The Context:</strong> We wanted to improve usage retention. So we needed to find the highest leverage point to move the needle.
                 </p>
@@ -40,7 +40,7 @@
                 
                 <p><strong>New users were the problem—and the opportunity.</strong></p>
                 
-                <p>Only about 40% of new users came back to use the product in their second month. This was a high-impact area worth investigating.</p>
+                <p>Only about 35% of new users came back to use the product in their second month. This was a high-impact area worth investigating.</p>
 
                 <h3>Finding the Pattern</h3>
                 <p>Through data analysis, I noticed a clear pattern: new users who performed at least one 'advanced feature' in their first month were <strong>2x more likely</strong> to return the next month.</p>
@@ -58,7 +58,7 @@
                 Can be tested quickly ✓</p>
 
                 <h2>How did I contribute to address this?</h2>
-                <p><strong>My recommendation:</strong> Create a new user onboarding survey that asks about their use case, then recommends a personalized set of actions to perform.</p>
+                <p><strong>My recommendation:</strong> Find a way to make it easier for new users to find and use relevant for their use case app advanced features. The PM came up with the new user onboarding survey idea and product. Bonus point, we collect actual users use cases information, which helps for further app and experience personalisation</p>
 
                 <p>I collaborated with the product manager on the delivery and experiment design. We structured it as an A/B test with three groups:</p>
 
@@ -161,17 +161,54 @@
                     <p style="text-align: center; font-size: 13px; color: #666; margin-top: 10px;">Average % of users activated by their first activity week</p>
                 </div>
 
-                <p>I collaborated with the product manager throughout the process—from hypothesis formation to experiment design, implementation tracking, and success analysis. The results validated our approach and led to a full rollout of the feature.</p>
-
-                <h2>What's next?</h2>
-                <p><strong>Continuous optimization</strong></p>
+                <h2>Conclusions & Analysis</h2>
                 
+                <h3>1. Checklist Effect: Validated ✓</h3>
+                <p><strong>Is exposed to checklist against not:</strong> Activation outperformance by 50% (23% vs 35%, 35% is quite on the usual baseline for this KPI)</p>
+                
+                <ul style="color: var(--text-secondary); line-height: 1.8;">
+                    <li>Users in Treatment: 827 (60%)</li>
+                    <li>Users in Control: 537</li>
+                </ul>
+
+                <p style="margin-top: 20px;"><strong>Conclusion:</strong> Providing new users with a checklist of recommended actions significantly improves activation rates. The 50% lift demonstrates clear value in guided onboarding.</p>
+
+                <h3>2. Personalization Effect: Strong Signal, Needs Validation</h3>
+                <p><strong>Is exposed to personalised checklist against default checklist:</strong></p>
+                
+                <ul style="color: var(--text-secondary); line-height: 1.8;">
+                    <li>Activation outperformance by c.50% against default checklist (30% vs 43%, 43% is quite high compared to the usual baseline for this KPI)</li>
+                    <li>Activation outperformance by 119% against no checklist at all / usual product experience (20% vs 43% activation percentage)</li>
+                    <li>Users in Treatment, 'Fundraising users': 310 (37%)</li>
+                    <li>Users in Control, 'Not fundraising users': 517</li>
+                </ul>
+
+                <div class="highlight-box" style="margin-top: 30px;">
+                    <p style="margin-bottom: 12px;"><strong>⚠️ Important Nuance: Potential Fundraising User Bias</strong></p>
+                    <p style="margin-bottom: 12px;">The personalization effect was only tested on fundraising users. There could be a 'fundraising users' bias—maybe historically, all users 'which are here for fundraising' have had better activation.</p>
+                    <p style="margin-bottom: 12px;"><strong>Mitigation strategy:</strong> I am building a 'user segmentation proxy' dataset to be able to, given users pageviews, guess what they are here for, and having this information could help us better protect ourselves against these bias.</p>
+                    <p style="margin-bottom: 0;">Still, it agrees with common sense that a more personalised feature is more impactful than a generic one. And, releasing this feature will help us gather such information for every new user, with no negative impact seen from the feature so far.</p>
+                </div>
+
+                <h3>Statistical Rigor</h3>
+                <p>The analysis followed proper statistical procedures:</p>
+                <ul style="color: var(--text-secondary); line-height: 1.8;">
+                    <li>Welch t test, robust to any particular assumptions about the data</li>
+                    <li>Quick analyses confirmed no substantial differences in the two groups, ensuring their main difference was the product they were exposed to</li>
+                    <li>Statistical significance achieved with alpha = 5% (we are okay with having a 5% chance of concluding there is an impact when there is not)</li>
+                </ul>
+
+                <h2>Recommendation & Next Steps</h2>
+                <p><strong>Release the new feature to all new users</strong></p>
+                
+                <p>The data supports a full rollout. We will gather very useful data from new users that helps us help them, while improving activation rates.</p>
+
                 <p>With the baseline improvement validated, the focus shifts to:</p>
                 <ul style="color: var(--text-secondary); line-height: 1.8;">
-                    <li>Refining the personalization logic based on user behavior patterns</li>
-                    <li>Testing additional onboarding touchpoints in the user journey</li>
+                    <li>Collecting use case information from all users to normalize for potential fundraising effect</li>
+                    <li>Building user segmentation proxy dataset for better bias detection</li>
+                    <li>Refining the personalization logic based on user behavior patterns across all segments</li>
                     <li>Monitoring long-term retention impact to validate the activation-retention correlation</li>
-                    <li>Expanding successful patterns to other user segments</li>
                 </ul>
 
                 <div style="margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--border-color); text-align: center;">
