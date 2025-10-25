@@ -399,6 +399,13 @@ section {
     border: 1px solid rgba(168, 85, 247, 0.2);
 }
 
+.case-study-tag.understated {
+    background: rgba(100, 100, 100, 0.08);
+    color: var(--text-secondary);
+    border: 1px solid rgba(100, 100, 100, 0.15);
+    font-weight: 500;
+}
+
 .case-study-card h3 {
     font-size: 20px;
     margin-bottom: 16px;
