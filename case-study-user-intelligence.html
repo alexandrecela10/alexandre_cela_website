@@ -10,6 +10,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
+        .case-study-content h1 {
+            font-size: 48px;
+            margin-bottom: 24px;
+            color: var(--text-primary);
+        }
+
         .case-study-content h2 {
             font-size: 32px;
             margin-top: 48px;
@@ -86,8 +92,15 @@
         .screenshot-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            gap: 16px;
             margin: 40px 0;
+        }
+
+        .screenshot-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
         .screenshot-caption {
@@ -95,6 +108,21 @@
             color: var(--text-light);
             font-style: italic;
             margin-top: 8px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 40px;
+            transition: var(--transition);
+        }
+        
+        .back-link:hover {
+            gap: 12px;
         }
     </style>
 </head>
@@ -125,9 +153,9 @@
                     Back to Case Studies
                 </a>
                 
-                <h1>50% Month-on-Month Platform Usage Growth Through User Intelligence Data Platform</h1>
+                <h1>User Intelligence Platform: Making User Intelligence Available, Easy to Understand and Leverage. At 10x speed. Saving mental bandwith for higher leverage work</h1>
                 <p style="font-size: 20px; color: var(--text-primary); margin-bottom: 40px;">
-                    <strong>The Goal:</strong> Transform user retention analysis from days to seconds by building a centralized user intelligence platform.
+                    <strong>The Challenge:</strong> I identified a gap in our data stack where user retention analysis took days instead of seconds. <strong>The Solution:</strong> Built a centralized user intelligence platform that transformed access to user insights. <strong>The Result:</strong> 50% month-on-month platform usage growth.
                 </p>
 
                 <div class="screenshot-grid">
@@ -136,7 +164,7 @@
                 </div>
 
                 <h2>What Problem Did This Solve?</h2>
-                <p>At Indeed Flex, a marketplace connecting hospitality venues with gig workers, understanding user behavior was critical but painfully slow. Product managers and analysts faced several challenges:</p>
+                <p>At Indeed Flex, a marketplace connecting hospitality venues with gig workers, I identified a critical gap in our data stack: understanding user behavior was essential but painfully slow. Product managers and analysts faced several challenges:</p>
                 
                 <ul style="color: var(--text-secondary); line-height: 1.8;">
                     <li><strong>Days-long wait times</strong> for simple data pulls across 8+ different datasets</li>
