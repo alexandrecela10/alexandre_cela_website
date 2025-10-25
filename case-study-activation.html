@@ -125,6 +125,71 @@
                     </div>
                 </div>
 
+                <!-- Workflow Diagram -->
+                <div style="margin: 40px 0; padding: 30px; background: var(--bg-card); border-radius: 12px; border: 1px solid var(--border-color);">
+                    <h3 style="text-align: center; margin-top: 0; margin-bottom: 30px; color: var(--text-primary);">Project Workflow</h3>
+                    <svg width="100%" height="200" viewBox="0 0 1100 200" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Step 1: I Relieve You - Segmentation Analysis -->
+                        <rect x="10" y="60" width="160" height="80" rx="8" fill="#a855f7" fill-opacity="0.1" stroke="#a855f7" stroke-width="2"/>
+                        <text x="90" y="85" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#a855f7" text-anchor="middle">I RELIEVE YOU</text>
+                        <text x="90" y="105" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#1a1a1a" text-anchor="middle">Segmentation</text>
+                        <text x="90" y="122" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#1a1a1a" text-anchor="middle">analysis</text>
+                        
+                        <!-- Arrow 1 -->
+                        <path d="M 170 100 L 200 100" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrowhead4)"/>
+                        
+                        <!-- Step 2: I Help You - Identify Opportunity -->
+                        <rect x="200" y="60" width="160" height="80" rx="8" fill="#3b82f6" fill-opacity="0.1" stroke="#3b82f6" stroke-width="2"/>
+                        <text x="280" y="85" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#3b82f6" text-anchor="middle">I HELP YOU</text>
+                        <text x="280" y="105" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#1a1a1a" text-anchor="middle">Identify new user</text>
+                        <text x="280" y="122" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#1a1a1a" text-anchor="middle">activation gap</text>
+                        
+                        <!-- Arrow 2 -->
+                        <path d="M 360 100 L 390 100" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrowhead4)"/>
+                        
+                        <!-- Step 3: I Help You - Partner with PM -->
+                        <rect x="390" y="60" width="160" height="80" rx="8" fill="#3b82f6" fill-opacity="0.1" stroke="#3b82f6" stroke-width="2"/>
+                        <text x="470" y="85" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#3b82f6" text-anchor="middle">I HELP YOU</text>
+                        <text x="470" y="105" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#1a1a1a" text-anchor="middle">Partner with PM</text>
+                        <text x="470" y="122" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#1a1a1a" text-anchor="middle">on solution</text>
+                        
+                        <!-- Arrow 3 -->
+                        <path d="M 550 100 L 580 100" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrowhead4)"/>
+                        
+                        <!-- Step 4: I Relieve You - Design Experiment -->
+                        <rect x="580" y="60" width="160" height="80" rx="8" fill="#a855f7" fill-opacity="0.1" stroke="#a855f7" stroke-width="2"/>
+                        <text x="660" y="85" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#a855f7" text-anchor="middle">I RELIEVE YOU</text>
+                        <text x="660" y="105" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#1a1a1a" text-anchor="middle">Design A/B test</text>
+                        <text x="660" y="122" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#1a1a1a" text-anchor="middle">& analyze results</text>
+                        
+                        <!-- Arrow 4 -->
+                        <path d="M 740 100 L 770 100" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrowhead4)"/>
+                        
+                        <!-- Step 5: I Help You - Recommend Rollout -->
+                        <rect x="770" y="60" width="160" height="80" rx="8" fill="#3b82f6" fill-opacity="0.1" stroke="#3b82f6" stroke-width="2"/>
+                        <text x="850" y="85" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#3b82f6" text-anchor="middle">I HELP YOU</text>
+                        <text x="850" y="105" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#1a1a1a" text-anchor="middle">Recommend</text>
+                        <text x="850" y="122" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#1a1a1a" text-anchor="middle">full rollout</text>
+                        
+                        <!-- Arrow marker definition -->
+                        <defs>
+                            <marker id="arrowhead4" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                                <polygon points="0 0, 10 3, 0 6" fill="#666"/>
+                            </marker>
+                        </defs>
+                    </svg>
+                    <div style="margin-top: 20px; display: flex; justify-content: center; gap: 32px; font-size: 13px;">
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <div style="width: 16px; height: 16px; background: #a855f7; opacity: 0.2; border: 2px solid #a855f7; border-radius: 4px;"></div>
+                            <span style="color: var(--text-secondary);"><strong style="color: #a855f7;">I Relieve You:</strong> Hands-on execution</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <div style="width: 16px; height: 16px; background: #3b82f6; opacity: 0.2; border: 2px solid #3b82f6; border-radius: 4px;"></div>
+                            <span style="color: var(--text-secondary);"><strong style="color: #3b82f6;">I Help You:</strong> Strategic partnership</span>
+                        </div>
+                    </div>
+                </div>
+
                 <h2>What were the challenges?</h2>
                 <p>Find high leverage actions to improve usage retention. Overall retention was stable at ~70% MoM, but through segmentation analysis I identified an uplift opportunity with <strong>new users</strong>: only 45% returned in their second month.</p>
                 
